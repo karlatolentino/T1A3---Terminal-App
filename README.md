@@ -3,16 +3,23 @@
 
 ## Table of Contents
 - [GitHub Repository](#github-repository)
-- [Purpose](#purpose)
+- [Purpose and Scope](#purpose-and-scope)
 - [Functionality and Features](#functionality-and-features)
-- [Sitemap](#sitemap)
-- [Screenshots](#screenshots)
-- [Target Audience](#target-audience)
-- [Tech Stack](#tech-stack)
+- [User Interaction and Experience](#user-interaction-and-experience)
+- [Diagram](#diagram)
+- [Implementation Plan](#implementation-plan)
 - [References](#references)
 
 ## GitHub Repository
 
+## Purpose and Scope
+
 ## Functionality and Features
+
+## User Interaction and Experience
+
+## Diagram
+
+## Implementation Plan
 
 ## References
