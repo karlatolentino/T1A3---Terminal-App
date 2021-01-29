@@ -14,12 +14,16 @@ data_hash = JSON.parse(file)
 
 require 'colorize'
 
+require 'artii'
+a = Artii::Base.new
+
 # FILE PATH
 
 
 
 # MENU OPTIONS
-puts "Welcome to Barber's Paradise!".colorize(:light_blue).on_white.bold
+puts a.asciify('Barber\'s Paradise')
+puts "🌴 Welcome to Barber's Paradise! 🌴".colorize(:light_blue).on_white.bold
 print "\n"
 puts "A place where the client and barber can enjoy a smooth-sailing experience with less fuss and more relaxation by cutting out the fluff!".colorize(:light_red)
 
@@ -44,7 +48,7 @@ while true
         print "\n"
    elsif choice == "❌ Exit"
         print "\n"
-        puts "See you at your next appointment!"
+        puts "See you at your next appointment!".colorize(:white).on_light_blue.bold
         exit
    else 
         puts "Invalid choice"
