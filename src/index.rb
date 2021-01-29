@@ -37,6 +37,7 @@ while true
         print "\n"
         print "\n"
    elsif choice == "❌ Exit"
+        print "\n"
         puts "See you at your next appointment!"
         exit
    else 
