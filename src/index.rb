@@ -10,13 +10,10 @@ prompt = TTY::Prompt.new
 
 require 'json'
 file = File.read('hair.json')
-data_hash=JSON.parse(file)
+data_hash = JSON.parse(file)
 data_hash.keys
 print "\n"
 data_hash['']
-
-
-
 
 # MENU OPTIONS
 
@@ -36,12 +33,11 @@ while true
            [
                
            ])
-
        puts allergy_test(allergy_choice, input)
    elsif choice == "📝 Record last haircut"
        puts "You are allergic to: #{get_allergies(input)}."
     elsif choice == "🎲 Generate random hair advice"
-
+       
     elsif choice == "Exit"
        exit
    else
