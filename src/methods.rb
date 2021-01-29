@@ -13,7 +13,9 @@ NEW HAIR RECOMMENDATION
 2. Pompadour
 3. Undercut slick back
 4. Side parted swept back hair
-5.
+5. Crop fringe
+6. Buzz cut, fade
+7. Man bun
 
 =end
 
