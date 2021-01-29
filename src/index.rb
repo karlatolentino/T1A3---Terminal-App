@@ -16,10 +16,12 @@ print "\n"
 data_hash['']
 
 # MENU OPTIONS
+puts "Welcome to Barber's Paradise!"
+puts "A place where the client and barber can enjoy a smooth-sailing experience with less fuss and more relaxation by cutting out the fluff!"
 
 while true
    choice = prompt.select(
-       "MENU", 
+       "Take a seat and choose from the options below:", 
        [
            "✨ Give me a new hairstyle!",
            "📝 Record last haircut",
@@ -28,14 +30,9 @@ while true
        ])
 
    if choice == "✨ Give me a new hairstyle!"
-       new_style = prompt.select(
-           "How short is your current hair?",
-           [
-               
-           ])
-       puts allergy_test(allergy_choice, input)
+       
    elsif choice == "📝 Record last haircut"
-       puts "You are allergic to: #{get_allergies(input)}."
+      
     elsif choice == "🎲 Generate random hair advice"
        
     elsif choice == "Exit"
