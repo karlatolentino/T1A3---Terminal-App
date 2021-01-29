@@ -19,3 +19,29 @@ NEW HAIR RECOMMENDATION
 
 =end
 
+# 📂 Record last haircut
+def get_hair
+    puts "When did you last cut your hair? day/month/year"
+    date = gets.chomp.to_s
+    puts "What was the length of your haircut in millimeters?"
+    length = gets.chomp.to_i
+    puts "If you used hair clippers, what guard number did you use on the back and sides?"
+    clipper = gets.chomp.to_f
+    puts "How did you style your hair?"
+    style = gets.chomp.to_s
+    puts "If you used product, what type of product did you use?"
+    product = gets.chomp.to_s
+    puts "Please add any additional notes to your experience"
+    notes = gets.chomp.to_s
+
+    print "\n"
+
+    puts "Last appointment date: #{date}
+    Hair length: #{length}mm
+    Clipper no.: #{clipper}
+    Style: #{style}
+    Product: #{product}
+    Notes: #{notes}"
+end
+
+get_hair
