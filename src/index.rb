@@ -2,9 +2,23 @@
 # DATA: history of haircuts, date, style
 # OUTPUT: suggested haircut style, recommended next haircut appointment
 
+# GEM FILES
+
 require "tty-prompt"
 
 prompt = TTY::Prompt.new
+
+require 'json'
+file = File.read('hair.json')
+data_hash=JSON.parse(file)
+data_hash.keys
+print "\n"
+data_hash['']
+
+
+
+
+# MENU OPTIONS
 
 while true
    choice = prompt.select(
@@ -12,7 +26,7 @@ while true
        [
            "✨ Give me a new hairstyle!",
            "📝 Record last haircut",
-           "Generate random hair advice",
+           "🎲 Generate random hair advice",
            "Exit"
        ])
 
@@ -24,9 +38,11 @@ while true
            ])
 
        puts allergy_test(allergy_choice, input)
-   elsif choice == "Full allergy List"
+   elsif choice == "📝 Record last haircut"
        puts "You are allergic to: #{get_allergies(input)}."
-   elsif choice == "Exit"
+    elsif choice == "🎲 Generate random hair advice"
+
+    elsif choice == "Exit"
        exit
    else
        p "Invalid choice"
