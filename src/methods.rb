@@ -25,7 +25,7 @@ def get_hair
     date = gets.chomp.to_s
     puts "What was the length of your haircut in millimeters?"
     length = gets.chomp.to_i
-    puts "If you used hair clippers, what guard number did you use on the back and sides?"
+    puts "Did you"
     clipper = gets.chomp.to_f
     puts "How did you style your hair?"
     style = gets.chomp.to_s
@@ -43,5 +43,3 @@ def get_hair
     Product: #{product}
     Notes: #{notes}"
 end
-
-get_hair

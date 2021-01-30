@@ -19,7 +19,7 @@ a = Artii::Base.new
 
 # FILE PATH
 
-
+require_relative('methods.rb')
 
 # MENU OPTIONS
 puts a.asciify('Barber\'s Paradise')
@@ -40,7 +40,7 @@ while true
    if choice == "💈 Give me a new hairstyle!"
 
    elsif choice == "📂 Record last haircut"
-
+        get_hair
    elsif choice == "💡 Generate random hair advice"
         print "\n"
         print data_hash['advice'].sample.colorize(:red).bold
