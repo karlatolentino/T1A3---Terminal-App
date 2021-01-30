@@ -96,16 +96,17 @@ while true
         Product: #{product}
         Notes: #{notes}".colorize(:light_blue)
 
-        data_hash['history'] << "Last appointment date: #{date}
+        data_hash['history'] << "
+        
+        Last appointment date: #{date}
         Hair length: #{length}mm
         Clipper no.: #{clipper}
         Style: #{style}
         Product: #{product}
         Notes: #{notes}"
         File.write('hair.json', JSON.dump(data_hash))
-
    elsif choice == "View history"
-        print history
+        print data_hash['history'].colorize(:red)
    elsif choice == "💡 Generate random hair advice"
         print "\n"
         print data_hash['advice'].sample.colorize(:red).bold
