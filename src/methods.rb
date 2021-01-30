@@ -23,6 +23,8 @@ NEW HAIR RECOMMENDATION
 
 
 # # 📂 Record last haircut
+
+
 def get_hair
     prompt = "> "
     
@@ -69,13 +71,14 @@ def get_hair
 
     puts "Please add any additional notes to your experience"
     notes = gets.chomp.to_s
-
+    
     print "\n"
 
     puts "Last appointment date: #{date}
-    Hair length: #{length}mm
-    Clipper no.: #{clipper}
-    Style: #{style}
-    Product: #{product}
-    Notes: #{notes}"
+        Hair length: #{length}mm
+        Clipper no.: #{clipper}
+        Style: #{style}
+        Product: #{product}
+        Notes: #{notes}".colorize(:light_blue)
 end
+

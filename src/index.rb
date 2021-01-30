@@ -6,7 +6,7 @@
 
 require "tty-prompt"
 
-prompt = TTY::Prompt.new
+prompt = TTY::Prompt.new(active_color: :cyan)
 
 require 'json'
 file = File.read('hair.json')
@@ -33,14 +33,79 @@ while true
        [
            "💈 Give me a new hairstyle!",
            "📂 Record last haircut",
+           "View history",
            "💡 Generate random hair advice",
            "❌ Exit"
        ])
-    
+    system 'clear'
    if choice == "💈 Give me a new hairstyle!"
         
-   elsif choice == "📂 Record last haircut"
-        get_hair
+   elsif choice == "📂 Record last haircut" 
+        prompt1 = "> "
+    
+        puts "When did you last cut your hair? day/month/year"
+        date = gets.chomp.to_s
+        
+        puts "What was the length of your haircut in millimeters?"
+        length = gets.chomp.to_i
+        
+        puts "Did you use clippers? Type \'yes' or 'no\'"
+        while clipper = gets.chomp.to_s
+            case clipper
+            when 'yes' 
+                puts "What guard number did you use on the clippers? Enter between 0 to 5"
+                clipper = gets.chomp.to_f
+                break
+            when 'no'
+                clipper = "none"
+                break
+            else
+                puts "Invalid input. Please enter \'yes' or 'no\'."
+                print prompt1
+            end
+        end
+
+        puts "How did you style your hair?"
+        style = gets.chomp.to_s
+
+        puts "Did you use product? Type \'yes' or 'no\'"
+        while product = gets.chomp.to_s
+            case product    
+            when 'yes'
+                puts "What product did you use?"
+                product = gets.chomp.to_s
+                break
+            when 'no'
+                product = "none"
+                break
+            else 
+            puts "Invalid input. Please enter \'yes' or 'no\'."
+            print prompt1
+            end
+        end
+
+        puts "Please add any additional notes to your experience"
+        notes = gets.chomp.to_s
+        
+        print "\n"
+
+        puts "Last appointment date: #{date}
+        Hair length: #{length}mm
+        Clipper no.: #{clipper}
+        Style: #{style}
+        Product: #{product}
+        Notes: #{notes}".colorize(:light_blue)
+
+        data_hash['history'] << "Last appointment date: #{date}
+        Hair length: #{length}mm
+        Clipper no.: #{clipper}
+        Style: #{style}
+        Product: #{product}
+        Notes: #{notes}"
+        File.write('hair.json', JSON.dump(data_hash))
+
+   elsif choice == "View history"
+        print history
    elsif choice == "💡 Generate random hair advice"
         print "\n"
         print data_hash['advice'].sample.colorize(:red).bold
