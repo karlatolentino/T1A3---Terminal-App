@@ -19,18 +19,54 @@ NEW HAIR RECOMMENDATION
 
 =end
 
-# 📂 Record last haircut
+
+
+
+# # 📂 Record last haircut
 def get_hair
+    prompt = "> "
+    
     puts "When did you last cut your hair? day/month/year"
     date = gets.chomp.to_s
+    
     puts "What was the length of your haircut in millimeters?"
     length = gets.chomp.to_i
-    puts "Did you"
-    clipper = gets.chomp.to_f
+    
+    puts "Did you use clippers? Type \'yes' or 'no\'"
+    while clipper = gets.chomp.to_s
+        case clipper
+        when 'yes' 
+            puts "What guard number did you use on the clippers? Enter between 0 to 5"
+            clipper = gets.chomp.to_f
+            break
+        when 'no'
+            clipper = "none"
+            break
+        else
+            puts "Invalid input. Please enter \'yes' or 'no\'."
+            print prompt
+        end
+    end
+
     puts "How did you style your hair?"
     style = gets.chomp.to_s
-    puts "If you used product, what type of product did you use?"
-    product = gets.chomp.to_s
+
+    puts "Did you use product? Type \'yes' or 'no\'"
+    while product = gets.chomp.to_s
+        case product    
+        when 'yes'
+            puts "What product did you use?"
+            product = gets.chomp.to_s
+            break
+        when 'no'
+            product = "none"
+            break
+        else 
+           puts "Invalid input. Please enter \'yes' or 'no\'."
+           print prompt
+        end
+    end
+
     puts "Please add any additional notes to your experience"
     notes = gets.chomp.to_s
 

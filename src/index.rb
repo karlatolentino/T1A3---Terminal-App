@@ -38,7 +38,7 @@ while true
        ])
     
    if choice == "💈 Give me a new hairstyle!"
-
+        
    elsif choice == "📂 Record last haircut"
         get_hair
    elsif choice == "💡 Generate random hair advice"
