@@ -32,15 +32,15 @@ while true
        "Take a seat and choose from the options below:", 
        [
            "💈 Give me a new hairstyle!",
-           "📂 Record last haircut",
-           "View history",
-           "💡 Generate random hair advice",
+           "💾 Record last haircut",
+           "📂 View history",
+           "💡 Generate random hair tip",
            "❌ Exit"
        ])
     system 'clear'
    if choice == "💈 Give me a new hairstyle!"
         
-   elsif choice == "📂 Record last haircut" 
+   elsif choice == "💾 Record last haircut" 
         prompt1 = "> "
     
         puts "When did you last cut your hair? day/month/year"
@@ -103,11 +103,13 @@ while true
         Clipper no.: #{clipper}
         Style: #{style}
         Product: #{product}
-        Notes: #{notes}"
+        Notes: #{notes}
+        
+        "
         File.write('hair.json', JSON.dump(data_hash))
-   elsif choice == "View history"
+   elsif choice == "📂 View history"
         print data_hash['history'].colorize(:red)
-   elsif choice == "💡 Generate random hair advice"
+   elsif choice == "💡 Generate random hair tip"
         print "\n"
         print data_hash['advice'].sample.colorize(:red).bold
         print "\n"
