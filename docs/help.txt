@@ -1,0 +1,30 @@
+## Running the app
+1. Locate the src folder (KarlaTolentino_T1A3/src/) in terminal.
+2. Execute Bash script `./runner.sh` to run application. If permission denied, run `ruby index.rb` to launch terminal application.
+3. Follow on-screen prompts in application for use. Arrow keys are used to navigate options. When prompted for input, type answer and select 'Enter' key to submit answer.
+
+
+## Application Help 
+When in terminal, use these command-line arguments for further information:
+ruby index.rb -help    to refer to the readme.md and help.txt file for more information
+               -path   shows current file path location
+               -info   shows which version of Ruby this program is using.
+                
+
+## Dependencies
+Use `bundle install` to install all dependencies used for this application.
+
+The followings dependencies are being used in this app:
+- gem "colorize", "~> 0.8.1"
+
+- gem "json", "~> 2.5"
+
+- gem "artii", "~> 2.1"
+
+- gem "tty-prompt", "~> 0.23.0"
+
+
+
+## System and Hardware Requirements
+Ruby was used to create this program.
+This application can be run on the operating systems Mac, Windows and Linux.

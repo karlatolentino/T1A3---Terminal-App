@@ -27,7 +27,7 @@ if ARGV.length > 0
     ARGV.clear
     case flag
     when '-help'
-        puts "View the readme.md file"
+        puts "View the readme.md and help.txt files for more information"
         exit
     when '-path'
         puts rest[0]
