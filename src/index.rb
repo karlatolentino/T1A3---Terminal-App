@@ -31,15 +31,13 @@ while true
    choice = prompt.select(
        "Take a seat and choose from the options below:", 
        [
-        #    "💈 Give me a new hairstyle!",
            "💈 Record last haircut",
            "📂 View history",
            "💡 Generate random hair tip",
            "❌ Exit"
        ])
     system 'clear'
-#    if choice == "💈 Give me a new hairstyle!"
-        
+
     if choice == "💈 Record last haircut" 
         prompt1 = "> "
         puts "When did you last cut your hair? day/month/year"
