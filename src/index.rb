@@ -27,7 +27,7 @@ if ARGV.length > 0
     ARGV.clear
     case flag
     when '-help'
-        puts "Read the readme.md file"
+        puts "View the readme.md file"
         exit
     when '-path'
         puts rest[0]
@@ -41,6 +41,7 @@ if ARGV.length > 0
     end
 end
 # MENU OPTIONS
+
 puts a.asciify('Barber\'s Paradise')
 puts "🌴 Welcome to Barber's Paradise! 🌴".colorize(:light_blue).on_white.bold
 print "\n"
@@ -62,13 +63,13 @@ while true
         puts "When did you last cut your hair? day/month/year"
         date = gets.chomp.to_s
         puts "What was the length of your haircut in millimeters?"
-        length = gets.chomp.to_i
+        length = gets.to_i
         puts "Did you use clippers? Type \'yes' or 'no\'"
         while clipper = gets.chomp.to_s
             case clipper
             when 'yes' 
-                puts "What guard number did you use on the clippers? Enter between 0 to 5"
-                clipper = gets.chomp.to_f
+                puts "What guard number did you use on the clippers?"
+                clipper = gets.chomp.to_i
                 break
             when 'no'
                 clipper = "none"

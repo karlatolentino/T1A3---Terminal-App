@@ -26,3 +26,4 @@ def get_history
             print data_hash['history'].colorize(:red)
         end
 end
+
