@@ -31,24 +31,23 @@ while true
    choice = prompt.select(
        "Take a seat and choose from the options below:", 
        [
-           "💈 Give me a new hairstyle!",
-           "💾 Record last haircut",
+        #    "💈 Give me a new hairstyle!",
+           "💈 Record last haircut",
            "📂 View history",
            "💡 Generate random hair tip",
            "❌ Exit"
        ])
     system 'clear'
-   if choice == "💈 Give me a new hairstyle!"
+#    if choice == "💈 Give me a new hairstyle!"
         
-   elsif choice == "💾 Record last haircut" 
+    if choice == "💈 Record last haircut" 
         prompt1 = "> "
-    
         puts "When did you last cut your hair? day/month/year"
         date = gets.chomp.to_s
-        
+
         puts "What was the length of your haircut in millimeters?"
         length = gets.chomp.to_i
-        
+
         puts "Did you use clippers? Type \'yes' or 'no\'"
         while clipper = gets.chomp.to_s
             case clipper
@@ -86,7 +85,7 @@ while true
 
         puts "Please add any additional notes to your experience"
         notes = gets.chomp.to_s
-        
+
         print "\n"
 
         puts "Last appointment date: #{date}
@@ -97,28 +96,27 @@ while true
         Notes: #{notes}".colorize(:light_blue)
 
         data_hash['history'] << "
-        
-        Last appointment date: #{date}
-        Hair length: #{length}mm
-        Clipper no.: #{clipper}
-        Style: #{style}
-        Product: #{product}
-        Notes: #{notes}
-        
-        "
-        File.write('hair.json', JSON.dump(data_hash))
-   elsif choice == "📂 View history"
-        print data_hash['history'].colorize(:red)
-   elsif choice == "💡 Generate random hair tip"
-        print "\n"
-        print data_hash['advice'].sample.colorize(:red).bold
-        print "\n"
-        print "\n"
-   elsif choice == "❌ Exit"
+            Last appointment date: #{date}
+            Hair length: #{length}mm
+            Clipper no.: #{clipper}
+            Style: #{style}
+            Product: #{product}
+            Notes: #{notes}
+            "
+            File.write('hair.json', JSON.dump(data_hash))
+    elsif choice == "📂 View history"
+        if data_hash['history'].empty?
+            puts "No history recorded. Please choose another option.".colorize(:light_blue).bold
+        else
+            print data_hash['history'].colorize(:red)
+        end
+    elsif choice == "💡 Generate random hair tip"
+        random_tip
+    elsif choice == "❌ Exit"
         print "\n"
         puts "See you at your next appointment!".colorize(:white).on_light_blue.bold
         exit
-   else 
+    else 
         puts "Invalid choice"
-   end
+    end
 end
