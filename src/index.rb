@@ -51,16 +51,16 @@ while true
    choice = prompt.select(
        "Take a seat and choose from the options below:", 
        [
-           "💈 Record last haircut",
-           "📂 View history",
+           "💈 Record haircut",
+           "📂 View haircut history",
            "💡 Generate random hair tip",
            "❌ Exit"
        ])
     system 'clear'
 
-    if choice == "💈 Record last haircut" 
+    if choice == "💈 Record haircut" 
         prompt1 = "> "
-        puts "When did you last cut your hair? day/month/year"
+        puts "When did you cut your hair? day/month/year"
         date = gets.chomp.to_s
         puts "What was the length of your haircut in millimeters?"
         length = gets.to_i
@@ -114,7 +114,7 @@ while true
             Notes: #{notes}
             "
         File.write('hair.json', JSON.dump(data_hash))
-    elsif choice == "📂 View history"
+    elsif choice == "📂 View haircut history"
         get_history
     elsif choice == "💡 Generate random hair tip"
         random_tip

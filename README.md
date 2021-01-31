@@ -52,6 +52,6 @@ Use `bundle install` to install all dependencies used for this application.
 ## System and Hardware Requirements
 
 ## Testing
-For my terminal application *Barber's Paradise*, I created a spreadsheet to manually test the functions of my program. 
+For my terminal application *Barber's Paradise*, I created a spreadsheet to manually test the functions of my program.
 
-Due to 
+Due to insufficient time, I was unable to complete testing for user input in the **Record Haircut**
