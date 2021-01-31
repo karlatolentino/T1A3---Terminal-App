@@ -27,9 +27,11 @@ The user will be able to navigate options to record new haircuts, view their pas
 
 ## Functionality and Features
 * **1. Menu Option and Welcome Screen**
+
 Upon launching the app, the user is greeted by the name of the program called *Barber's Paradise*. The user is then given four options to choose from by navigating the options using the up and down arrows and pressing 'Enter' to select the option. The four options are explained below.
 
 * **2. Record Haircut**
+
 By choosing this feature from the menu option, the program will ask the user for input to collect and store data. The inputs for this feature involve retrieving information on the following:
 - the date of their previous haircut experience
 - the hair length that was given measured in millimeters
@@ -41,15 +43,14 @@ By choosing this feature from the menu option, the program will ask the user for
 After obtaining this data from the user, it will save the input into a separate JSON file in the application and be stored for viewing in the next feature below.
 
 * **3. View Haircut History**
+
 Choosing this feature from the menu option will display a list of all of the recorded haircut data that have been collected from the user. The order of history will be displayed to screen to the user from oldest entry to newest entry.
 
 If no previous entry has been recorded, the application will run a message saying that it is empty.
 
 * **4.Generate Random Hair Tip**
-Choosing this feature from the menu option will generate a random hair tip to display to the user. The descriptions of these tips range from helpful advice to consider when visiting your next barbershop or salon. The tips also contain advice on looking after your hair and yourself.
 
-* **5Exit**
-Choosing this feature from the menu option will exit the application.
+Choosing this feature from the menu option will generate a random hair tip to display to the user. The descriptions of these tips range from helpful advice to consider when visiting your next barbershop or salon. The tips also contain advice on looking after your hair and yourself.
 
 ## User Interaction and Experience
 This app is designed to keep communication between client and hairdresser as smooth as possible. With this in mind, the user interface and experience for this app is quite simple and easy to navigate. Users will be able to view all options for the application via a menu selection upon launching. They will be advised to scroll through options using arrow keys and press enter. The colour theme selected for use in the application are the traditional barber pole colours: white, blue and red 💈.
