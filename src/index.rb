@@ -42,10 +42,8 @@ while true
         prompt1 = "> "
         puts "When did you last cut your hair? day/month/year"
         date = gets.chomp.to_s
-
         puts "What was the length of your haircut in millimeters?"
         length = gets.chomp.to_i
-
         puts "Did you use clippers? Type \'yes' or 'no\'"
         while clipper = gets.chomp.to_s
             case clipper
@@ -61,10 +59,8 @@ while true
                 print prompt1
             end
         end
-
         puts "How did you style your hair?"
         style = gets.chomp.to_s
-
         puts "Did you use product? Type \'yes' or 'no\'"
         while product = gets.chomp.to_s
             case product    
@@ -80,19 +76,15 @@ while true
             print prompt1
             end
         end
-
         puts "Please add any additional notes to your experience"
         notes = gets.chomp.to_s
-
         print "\n"
-
         puts "Last appointment date: #{date}
         Hair length: #{length}mm
         Clipper no.: #{clipper}
         Style: #{style}
         Product: #{product}
         Notes: #{notes}".colorize(:light_blue)
-
         data_hash['history'] << "
             Last appointment date: #{date}
             Hair length: #{length}mm
@@ -101,13 +93,9 @@ while true
             Product: #{product}
             Notes: #{notes}
             "
-            File.write('hair.json', JSON.dump(data_hash))
+        File.write('hair.json', JSON.dump(data_hash))
     elsif choice == "📂 View history"
-        if data_hash['history'].empty?
-            puts "No history recorded. Please choose another option.".colorize(:light_blue).bold
-        else
-            print data_hash['history'].colorize(:red)
-        end
+        get_history
     elsif choice == "💡 Generate random hair tip"
         random_tip
     elsif choice == "❌ Exit"
