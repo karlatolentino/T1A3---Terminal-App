@@ -21,9 +21,9 @@ https://github.com/karlatolentino/T1A3---Terminal-App
 ## Functionality and Features
 * **1. Menu Option and Welcome Screen**
 
-* **2. Record Hair Cuts**
+* **2. Record Haircut**
 
-* **3. View Past Hair Cuts**
+* **3. View Haircut History**
 
 * **4.Generate Random Hair Tip**
 
@@ -54,4 +54,9 @@ Use `bundle install` to install all dependencies used for this application.
 ## Testing
 For my terminal application *Barber's Paradise*, I created a spreadsheet to manually test the functions of my program.
 
-Due to insufficient time, I was unable to complete testing for user input in the **Record Haircut**
+Due to insufficient time, I was unable to complete and pass testing for user input in the **Record Haircut** feature where the user is prompted input for date and guard number. The program will still take and record user input as data and will display in the history.
+
+**Please refer to the manual testing spreadsheet located in (./docs/manual_testing_spreadsheet.xlsx)**
+
+Take me [there](./docs/manual_testing_spreadsheet.xlsx). Open in Microsoft Excel or Numbers.
+Or open the PDF version [here](./docs/manual_testing_spreadsheet1.pdf).
