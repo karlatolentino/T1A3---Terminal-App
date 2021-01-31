@@ -21,6 +21,25 @@ a = Artii::Base.new
 
 require_relative('methods.rb')
 
+# CLI
+if ARGV.length > 0
+    flag, *rest = ARGV
+    ARGV.clear
+    case flag
+    when '-help'
+        puts "Read the readme.md file"
+        exit
+    when '-path'
+        puts rest[0]
+        exit
+    when '-info'
+        puts "This program is using Ruby version: #{RUBY_VERSION}"
+        exit
+    else
+        puts "Invalid input"
+        exit
+    end
+end
 # MENU OPTIONS
 puts a.asciify('Barber\'s Paradise')
 puts "🌴 Welcome to Barber's Paradise! 🌴".colorize(:light_blue).on_white.bold
