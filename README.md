@@ -121,6 +121,10 @@ I used Trello to keep track of and manage my project throughout this assignment.
 <img src="./docs/implementation2.png">
 <img src="./docs/implementation1.png">
 
+
+**Error Handling**
+All inputs have been manually tested for error. As the main feature relies heavily on documentation for users recording haircuts, the prompts will take in strings to output to user to best describe their experience. Any insufficient input will be redirected to the prompt until program is satisfied.
+
 ## Help Documentation
 Find the help documentation [here](./docs/help.txt).
 
